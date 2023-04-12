@@ -12,14 +12,29 @@
           <div class="flex aic W100">
             <span class="w100 txalE mg-r-10">提示语</span>
             <div class="flex1 pd-6 flex aic fwp" style="border:1px solid #eeeeee;border-radius: 4px;flex:1;min-height: 40px;">{{ selectedTagList.join(',') }}</div>
-            <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;" @click="copy">复制</div>
+            <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;" @click="copy(1)">复制</div>
             <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;">清空</div>
           </div>
           <div class="flex mg-t-10 aic W100">
             <span class="w100 txalE mg-r-10">反向提示语</span>
             <div class="flex1 pd-6 flex aic fwp" style="border:1px solid #eeeeee;border-radius: 4px;flex:1;min-height: 40px;"></div>
-            <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;">复制</div>
+            <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;" @click="copy(2)">复制</div>
           </div>
+        </div>
+        <div class="W100 pd-r-20 pd-l-20 pd-t-20 pd-b-10" style="border: 1px solid #eee;border-radius: 0px;">
+          <!-- <div></div> -->
+          <draggable 
+            v-model="selectedTagListZh" 
+            group="people" 
+            @start="drag=true" 
+            @end="drag=false" 
+            item-key="item"
+            class="flex fwp" >
+            <template #item="{element}">
+              <div class="pd-10 pointer mg-r-10 mg-b-6" style="border: 1px solid #eeeeee;">{{element}}</div>
+            </template>
+          </draggable>
+
         </div>
         <div class="W100 mg-t-10 mg-b-10 pd-20" style="border: 1px solid #eee;border-radius: 0px;">
           <div class="flex aic" style="flex-wrap: wrap;">
@@ -37,16 +52,19 @@
 <script>
 import { ref, reactive } from "vue";
 import tag from '../util/tag'
+import draggable from 'vuedraggable';
 export default {
   setup() {
     const tags = [];
     const selectedTags = ref([]);
 
-
     return {
       tags,
       selectedTags,
     };
+  },
+  components: {
+    draggable,
   },
   data(){
     return {
@@ -113,8 +131,10 @@ export default {
           value: 'R18'
         },
       ],
-      selectedTagContent:[],
-      selectedTagList:[],
+      selectedTagContent:[],// 提示词组
+      selectedTagList:[], //已选择的英文提示词组
+      selectedTagListZh:[],//已选择的中文提示词组
+      drag: false,
     }
   },  
   created(){
@@ -122,16 +142,23 @@ export default {
   },
   methods:{
     copy(){
-      console.log(this.selectedTagList);
+      // 复制 已选择提示词组
+      if (navigator.clipboard) {
+          navigator.clipboard.writeText(this.selectedTagList.join(','));
+      }else{
+        alert('复制失败，clipboard不可用，建议更换浏览器使用')
+      }
     },  
     selectedTag(params) {
+      // 切换 提示词组
       let {value} = params.target.dataset  
       this.selectedTagContent = this.tag[value]
-      console.log(this.selectedTagContent);
     },
     toggleTag(tag) {
+      // 选择提示词，若在selectedTagList中已存在则进行反选
       if (this.selectedTagList.includes(tag.english)) {
         this.selectedTagList = this.selectedTagList.filter((t) => t !== tag.english);
+        this.selectedTagListZh = this.selectedTagListZh.filter((t) => t !== tag.chinese);
         this.selectedTagContent.map((item)=>{
           if(item.english == tag.english){
             item.checked = false
@@ -139,13 +166,14 @@ export default {
         })
       } else {
         this.selectedTagList.push(tag.english);
+        this.selectedTagListZh.push(tag.chinese);
         this.selectedTagContent.map((item)=>{
           if(item.english == tag.english){
             item.checked = true
           }
         })
       }
-      console.log(this.selectedTagList, this.selectedTagContent);
+      console.log(this.selectedTagListZh);
     }
   }
 };
