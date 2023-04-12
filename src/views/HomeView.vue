@@ -8,7 +8,7 @@
             {{ item.name }}
           </div>
         </div>
-        <div class="fdc ais W100 mg-b-10" >
+        <div class="fdc ais W100 mg-b-10" >  
           <div class="flex aic W100">
             <span class="w100 txalE mg-r-10">提示语</span>
             <div class="flex1 pd-6 flex aic fwp" style="border:1px solid #eeeeee;border-radius: 4px;flex:1;min-height: 40px;">{{ selectedTagList.join(',') }}</div>
