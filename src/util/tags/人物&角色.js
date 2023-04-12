@@ -10,7 +10,12 @@ export default [{
 }, {
     "english": "boy",
     "chinese": "男孩\r\n"
-}, {
+},
+{
+    "english": "chili",
+    "chinese": "Q版小人"
+}, 
+{
     "english": "2boys",
     "chinese": "2男孩\r\n"
 }, {
