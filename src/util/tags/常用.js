@@ -19,10 +19,7 @@ export default[{
 }, {
     "english": "tiamat (fate)",
     "chinese": "提亚马特\n"
-}, {
-    "english": "",
-    "chinese": ""
-}, {
+},{
     "english": "surrounded, multiple others, exhibitionism, audience, background characters, crowd, public humiliation",
     "chinese": "露出\n"
 }, {

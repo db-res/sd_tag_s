@@ -55,13 +55,7 @@ import tag from '../util/tag'
 import draggable from 'vuedraggable';
 export default {
   setup() {
-    const tags = [];
-    const selectedTags = ref([]);
-
-    return {
-      tags,
-      selectedTags,
-    };
+    
   },
   components: {
     draggable,
@@ -69,6 +63,7 @@ export default {
   data(){
     return {
       tag:null,
+      selectTag:'',
       tagList:[
         {
           name:'常用',
@@ -137,7 +132,13 @@ export default {
       drag: false,
     }
   },  
+  watch:{
+    selectTag:function (n,o) {
+      this.selectedTagContent = this.tag[n]
+    }
+  },
   created(){
+    this.selectTag = 'commonly'
     this.tag = JSON.parse(JSON.stringify(tag))
   },
   methods:{
@@ -152,7 +153,7 @@ export default {
     selectedTag(params) {
       // 切换 提示词组
       let {value} = params.target.dataset  
-      this.selectedTagContent = this.tag[value]
+      this.selectTag = value
     },
     toggleTag(tag) {
       // 选择提示词，若在selectedTagList中已存在则进行反选
