@@ -1,4 +1,4 @@
-import{r as b,o as r,c as g,a as i,F as u,b as p,t,n as m,p as _,d as y}from"./index-ea5a51fb.js";const w=[{english:"masterpiece",chinese:"大师作品"},{english:"best quality",chinese:"最好画质"},{english:"masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper",chinese:"更高质量"},{english:"wedding dress:china dress:0.3",chinese:`旗袍婚纱
+import{r as b,o as r,c as g,a as i,F as u,b as p,t,n as m,p as _,d as y}from"./index-4797f09a.js";const w=[{english:"masterpiece",chinese:"大师作品"},{english:"best quality",chinese:"最好画质"},{english:"masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper",chinese:"更高质量"},{english:"wedding dress:china dress:0.3",chinese:`旗袍婚纱
 `},{english:"arms behind head",chinese:`双手脑后
 `},{english:"arms up, armpits",chinese:`举手露腋
 `},{english:"tiamat (fate)",chinese:`提亚马特
