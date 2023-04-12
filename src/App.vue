@@ -6,7 +6,7 @@
   <RouterView />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
     @for $i from 0 through 200 {
     .bor-#{$i} { border-radius: 1px * $i; }
     .Bor-#{$i} { border-radius: 1% * $i; }
