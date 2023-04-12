@@ -12,7 +12,7 @@
           <div class="flex aic W100">
             <span class="w100 txalE mg-r-10">提示语</span>
             <div class="flex1 pd-6 flex aic fwp" style="border:1px solid #eeeeee;border-radius: 4px;flex:1;min-height: 40px;">{{ selectedTagList.join(',') }}</div>
-            <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;">复制</div>
+            <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;" @click="copy">复制</div>
             <div class="pd-10 bor-4 t5 mg-l-10 pointer" style="background-color: aquamarine;">清空</div>
           </div>
           <div class="flex mg-t-10 aic W100">
@@ -121,6 +121,9 @@ export default {
     this.tag = JSON.parse(JSON.stringify(tag))
   },
   methods:{
+    copy(){
+      console.log(this.selectedTagList);
+    },  
     selectedTag(params) {
       let {value} = params.target.dataset  
       this.selectedTagContent = this.tag[value]
