@@ -427,10 +427,7 @@ export default [{
 }, {
     "english": "anal_beads",
     "chinese": "肛珠\r\n"
-}, {
-    "english": "dildo",
-    "chinese": "假屌\r\n"
-}, {
+},{
     "english": "cock_ring",
     "chinese": "屌环\r\n"
 }, {

@@ -104,9 +104,6 @@ export default[{
     "english": "earrings",
     "chinese": "耳环\r\n"
 }, {
-    "english": "jewelry",
-    "chinese": "首饰\r\n"
-}, {
     "english": "bell",
     "chinese": "铃铛\r\n"
 }, {

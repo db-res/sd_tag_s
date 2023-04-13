@@ -116,9 +116,6 @@ export default [{
     "english": "hime_cut",
     "chinese": "公主切\r\n"
 }, {
-    "english": "crossed bangs",
-    "chinese": "交叉刘海\r\n"
-}, {
     "english": "hair wings",
     "chinese": "翼状头发\r\n"
 }, {
@@ -139,10 +136,7 @@ export default [{
 }, {
     "english": "drill hair",
     "chinese": "公主卷\r\n"
-}, {
-    "english": "hair bun",
-    "chinese": "包子头\r\n"
-}, {
+},{
     "english": "double_bun",
     "chinese": "俩包子头\r\n"
 }, {

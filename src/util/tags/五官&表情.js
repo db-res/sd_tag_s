@@ -185,9 +185,6 @@ export default [{
     "english": "frown",
     "chinese": "皱眉\r\n"
 }, {
-    "english": "smirk",
-    "chinese": "认真\r\n"
-}, {
     "english": "serious",
     "chinese": "严肃\r\n"
 }, {
@@ -204,7 +201,7 @@ export default [{
     "chinese": "黑化的\r\n"
 }, {
     "english": "smirk",
-    "chinese": "微笑\r\n"
+    "chinese": "\r\n"
 }, {
     "english": "smug",
     "chinese": "得意\r\n"
@@ -259,10 +256,7 @@ export default [{
 }, {
     "english": ":d",
     "chinese": "杯型笑脸"
-}, {
-    "english": "naughty_face",
-    "chinese": "下流的表情\r\n"
-}, {
+},{
     "english": "endured_face",
     "chinese": "忍耐的表情\r\n"
 }, {

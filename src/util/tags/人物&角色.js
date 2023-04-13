@@ -72,10 +72,7 @@ export default [{
 }, {
     "english": "milf",
     "chinese": "熟女\r\n"
-}, {
-    "english": "harem",
-    "chinese": "后宫"
-}, {
+},  {
     "english": "angel",
     "chinese": "天使\r\n"
 }, {
@@ -121,9 +118,6 @@ export default [{
     "english": "kemonomimi_mode",
     "chinese": "兽耳萝莉模式\r\n"
 }, {
-    "english": "loli",
-    "chinese": "萝莉\r\n"
-}, {
     "english": "magical_girl",
     "chinese": "魔法少女\r\n"
 }, {
@@ -138,9 +132,6 @@ export default [{
 }, {
     "english": "miko",
     "chinese": "巫女\r\n"
-}, {
-    "english": "milf",
-    "chinese": "熟女\r\n"
 }, {
     "english": "minigirl",
     "chinese": "迷你女孩\r\n"
@@ -162,10 +153,7 @@ export default [{
 }, {
     "english": "nurse",
     "chinese": "护士\r\n"
-}, {
-    "english": "shota",
-    "chinese": "正太\r\n"
-}, {
+},  {
     "english": "stewardess",
     "chinese": "空姐\r\n"
 }, {
